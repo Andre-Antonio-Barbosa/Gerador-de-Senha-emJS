@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha</title>
+</head>
+
+<body>
+    <div>
+        <h1>Gerador de Senha</h1>
+
+        <p>Utilize o nosso gerador de senha online, para criar uma senha forte e segura</p>
+        <p>
+            <label for="password"></label>
+            <input type="text" name="password" id="password">
+        </p>
+        <p>
+            <label for="range"></label>
+            <input type="range" name="password-lenght" id="password-lenght" value="16" min="4" max="16" />
+        </p>
+        <p>
+            <button>Copiar Senha</button>
+        </p>
+
+        <script> // A função irá calcular a senha, baseada numa String semente, exemplo abaixo:
+
+            function generatePassword() {
+                const chars = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ123456789?!@&*()[]"
+
+                let password = " " // => Que será o password/senha gerada
+
+                /* Será criado um Loop que irá percorrer uma quantidade de vezes que vai ser o tamanho da minha senha 
+                de acordo com o cumprimento dele, e cada vez que ele passa neste Loop, ele irá sortear uma letra ou um
+                símbolo */
+
+                // Veja abaixo:
+
+                for (let i = 0; i < 8; i++) { // o número 8 => É o tamanho da senha que eu quero
+                    const randomNumber = Math.floor(Math.random() * chars.lenght) // vezes a quantidade de caracteres que está no CHARS
+                    password += chars.substring(randomNumber, randomNumber + 1)
+
+                    /*  chars.substring() => Esta função faz um recorte no password gerado, porque eu não quero toda 
+                     o total que está dentro don CHARs a ideia é fazer o recorte.*/
+
+                    // Pegar o valor da variável let password e jogar para o input.
+                    // PEGANDO O INPUT
+
+
+                }
+
+                const inputElement = document.querySelector("#password");
+                inputElement.value = password;
+
+
+                console.log(password);
+
+                const passwordLenghtEl =  document.querySelector('#password-lenght');
+                passwordLenghtEl.addEventListener('input', function() ) { //=> Irpa pegar o valor para criar a função
+                    console.log(passwordLenght = passwordLenghtE.value
+                    console.log(passwordLengh))
+                }
+
+
+                generatePassword();
+
+                /*  Math => Sempre retorna números inteiros positivos
+                 Math.floor => Irá retornar o menor número inteiro dentro de um número
+                 randomNumber => Faz sortear um número aleatório
+ 
+                 Math.random => Irá chamar uma função de randomização, sorteando número de 0 a 1
+                 ou seja, terá um intervalo de 0 a 1 */
+
+                /* 
+                
+                for(let i = 0; i < 8; i++)
+                Se i for menor que 8 deve se avançar, ou seja, somar mais um, e assim por diante */
+                // o número 8 => É o tamanho da senha que eu quero
+
+                // Depois criar um número randomico, ou seja, que será baseada no cumprimento da senha 
+
+
+
+            }
+        </script>
+    </div>
+</body>
+
+</html>
